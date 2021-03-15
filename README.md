@@ -1,21 +1,21 @@
 # API-Factory
 
-> For any JavaScript frameworks
+> For any JavaScript Framework
 
-## Base Setup
+# Base Setup
 
-# Inject to Project Context
+## Inject to Project Context
 Init plugins/api.js inside the project
 
-# Adding API URLS
+## Adding API URLS
 Using dotenv for Microservices API
 Add API URLS to urls.js
 
-# Module base template
+## Module base template
 Copy Templates from sample modules
 
-# Initialization
+## Initialization
 Initialize inside base.js
 
-# Usage
+## Usage
 Setup inside index.js and check usage folder
