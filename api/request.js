@@ -1,4 +1,4 @@
-const axios = require('axios') // TODO: Should Use @nuxt/axios
+// const axios = require('axios') // Should Use global axios
 
 const list = require('../utils/listHelper').default
 
