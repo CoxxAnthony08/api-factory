@@ -2,6 +2,7 @@
 
 ## Template
 
+```js
 export default class [API_NAME] extends Request {
     constructor (axios, url) {
         super(axios, url)
