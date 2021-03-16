@@ -1,6 +1,6 @@
 // const axios = require('axios') // Should Use global axios
 
-const list = require('../utils/listHelper').default
+const list = require('./utils/listHelper').default
 
 var loadingCallback = null
 var logoutCallback = null
