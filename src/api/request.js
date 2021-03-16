@@ -185,7 +185,7 @@ export default class Request {
 
     let furl = urlHelper({ url: this.apiUrl, slug })
 
-    let promise = this.axios.delete(furl, headers)
+    let promise = this.axios.delete(furl, {headers})
       .then(function ({ data }) {
         promiseHelper(promise);
 
