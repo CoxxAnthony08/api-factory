@@ -19,3 +19,7 @@ Initialize inside base.js
 
 ## Usage
 Setup inside index.js and check usage folder
+
+## Frameworks
+Vue.js: api-factory/vue-config
+Nuxt.js: api-factory/nuxt-config
