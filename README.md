@@ -21,5 +21,5 @@ Initialize inside base.js
 Setup inside index.js and check usage folder
 
 ## Frameworks
-Vue.js: api-factory/vue-config
-Nuxt.js: api-factory/nuxt-config
+- [Vue.js](https://github.com/coxxanthony/api-factory/tree/vue-config)
+- [Nuxt.js](https://github.com/coxxanthony/api-factory/tree/nuxt-config)
