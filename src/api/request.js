@@ -100,11 +100,11 @@ export default class Request {
     logoutCallback = logoutCB
   }
 
-  get_request({ slug, params, success, fail }) {
+  get_request({ slug, params, headers, success, fail }) {
 
     let furl = urlHelper({ url: this.apiUrl, slug, params })
 
-    let promise = this.axios.get(furl)
+    let promise = this.axios.get(furl, {headers})
       .then(function ({ data }) {
         if (typeof success === 'function') success(data)
       })
@@ -115,33 +115,11 @@ export default class Request {
     return promise
   }
 
-  post_request({ slug, form, params, success, fail }) {
+  post_request({ slug, form, params, headers, success, fail }) {
 
-    let furl = urlHelper({ url: this.apiUrl, slug, params: params })
+    let furl = urlHelper({ url: this.apiUrl, slug, params })
 
-    let promise = this.axios.post(furl, form)
-      .then(function ({ data }) {
-        promiseHelper(promise);
-
-        if (typeof success === 'function') success(data)
-      })
-      .catch(function (error) {
-        promiseHelper(promise);
-
-        if (typeof fail === 'function') fail(error)
-      })
-
-    promiseHelper(promise)
-
-    return promise
-
-  }
-
-  put_request({ slug, form, success, fail }) {
-
-    let furl = urlHelper({ url: this.apiUrl, slug })
-
-    let promise = this.axios.put(furl, form)
+    let promise = this.axios.post(furl, form, {headers})
       .then(function ({ data }) {
         promiseHelper(promise);
 
@@ -159,11 +137,11 @@ export default class Request {
 
   }
 
-  patch_request({ slug, form, success, fail }) {
+  put_request({ slug, form, headers, success, fail }) {
 
     let furl = urlHelper({ url: this.apiUrl, slug })
 
-    let promise = this.axios.patch(furl, form)
+    let promise = this.axios.put(furl, form, {headers})
       .then(function ({ data }) {
         promiseHelper(promise);
 
@@ -181,11 +159,33 @@ export default class Request {
 
   }
 
-  delete_request({ slug, success, fail }) {
+  patch_request({ slug, form, headers, success, fail }) {
 
     let furl = urlHelper({ url: this.apiUrl, slug })
 
-    let promise = this.axios.delete(furl)
+    let promise = this.axios.patch(furl, form, {headers})
+      .then(function ({ data }) {
+        promiseHelper(promise);
+
+        if (typeof success === 'function') success(data)
+      })
+      .catch(function (error) {
+        promiseHelper(promise);
+
+        if (typeof fail === 'function') fail(error)
+      })
+
+    promiseHelper(promise)
+
+    return promise
+
+  }
+
+  delete_request({ slug, headers, success, fail }) {
+
+    let furl = urlHelper({ url: this.apiUrl, slug })
+
+    let promise = this.axios.delete(furl, headers)
       .then(function ({ data }) {
         promiseHelper(promise);
 
