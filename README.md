@@ -20,6 +20,6 @@ Initialize inside base.js
 ## Usage
 Setup inside index.js and check usage folder
 
-## Frameworks
+## API-Factor for Frameworks:
 - [Vue.js](https://github.com/coxxanthony/api-factory/tree/vue-config)
 - [Nuxt.js](https://github.com/coxxanthony/api-factory/tree/nuxt-config)
